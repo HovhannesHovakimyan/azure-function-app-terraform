@@ -1,5 +1,9 @@
 provider "azurerm" {
-  features {}
+  features {
+    log_analytics_workspace {
+      permanently_delete_on_destroy = true
+    }
+  }
 }
 
 provider "azurecaf" {

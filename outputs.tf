@@ -23,3 +23,6 @@ output "app_id" {
 }
 
 # #### storage account ###
+output "storage_account_name" {
+  value = azurecaf_name.azurecaf_names["storage_account"].result
+}

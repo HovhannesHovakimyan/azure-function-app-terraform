@@ -26,3 +26,7 @@ output "app_id" {
 output "storage_account_name" {
   value = azurecaf_name.azurecaf_names["storage_account"].result
 }
+
+output "storage_queue_name" {
+  value = azurecaf_name.azurecaf_names["storage_queue"].result
+}

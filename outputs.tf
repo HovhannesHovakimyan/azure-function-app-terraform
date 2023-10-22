@@ -41,6 +41,15 @@ output "function_app_name" {
   value = azurerm_linux_function_app.main.name
 }
 
+output "function_app_principal_id" {
+  value = azurerm_linux_function_app.main.identity[0].principal_id
+}
+
 output "function_app_function_name" {
   value = azurerm_function_app_function.main.name
+}
+
+# #### key vault ###
+output "key_vault_name" {
+  value = azurerm_key_vault.main.name
 }

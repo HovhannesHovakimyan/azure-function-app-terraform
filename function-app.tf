@@ -13,5 +13,21 @@ resource "azurerm_linux_function_app" "main" {
     application_stack {
       python_version = "3.9"
     }
+    cors {
+      allowed_origins     = ["https://portal.azure.com"]
+      support_credentials = true
+    }
   }
+
+  app_settings = {
+    "KEY_VAULT_NAME" = azurecaf_name.azurecaf_names["key_vault"].result
+    "secretName"     = "hhcompany"
+    "secretValue"    = "BestLifeBalance"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  tags = var.tags_params
 }

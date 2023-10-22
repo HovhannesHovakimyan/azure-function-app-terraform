@@ -13,11 +13,6 @@ resource "azurerm_function_app_function" "main" {
     content = file("scripts/v1/readme.md")
   }
 
-  # file {
-  #   name    = "host.json"
-  #   content = file("scripts/host.json")
-  # }
-
   test_data = jsonencode({
     "name" = "Azure"
   })

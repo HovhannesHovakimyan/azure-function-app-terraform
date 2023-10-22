@@ -3,6 +3,6 @@ resource "azurerm_service_plan" "main" {
   resource_group_name = azurerm_resource_group.main.name
   location            = var.location
   os_type             = "Linux"
-  sku_name            = "P0v3"
-  # tags                = var.tags_params
+  sku_name            = "Y1"
+  tags                = var.tags_params
 }

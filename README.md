@@ -20,7 +20,7 @@ This Terraform code will create an Azure Function App and a new Python function.
 
 ## Created resources
 
-Terraform code and used command above will deploy the following Azure resources:
+Terraform code and used command above will deploy and configure the following Azure resources:
 - Resource Group
 - Log Analytics Workspace
 - Application Insights

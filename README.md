@@ -28,7 +28,7 @@ You need to install and properly configure the following:
 - From your terminal of choice log in to Azure with the following command:
 ```az login```
 ```az account set --subscription **your subscription name or ID**```
-- Navigate to the clonned directory run the following command.
+- Navigate to the clonned directory run the following command:
 ```terraform init && terraform plan```
 - If the Terraform plan looks good for you, you can apply the changes by running:
 ```terraform apply --auto-approve```

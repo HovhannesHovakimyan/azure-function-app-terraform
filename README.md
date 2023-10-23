@@ -8,7 +8,7 @@ This Terraform code will create an Azure Function App and a new Python function.
 > You need to install and properly configure Terraform 1.5 or later.
 
 
-# Usage
+## Usage
 
 - Clone this Git repository.
 - Check and modify values in the **values.auto.tfvars** file.
@@ -34,7 +34,7 @@ Terraform code and used command above will deploy the following Azure resources:
 -- Function based on Python v3.9
 
 
-# Cleanup
+## Cleanup
 
 Delete all resources created by this Terraform code.
 

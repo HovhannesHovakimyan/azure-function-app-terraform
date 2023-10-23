@@ -5,7 +5,7 @@ This Terraform code will create an Azure Function App and a new Python function.
 
 # Prerequisites
 
-> You need to have installed Terraform 1.5 or greater.
+> You need to install and properly configure Terraform 1.5 or later.
 
 
 # Usage

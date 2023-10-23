@@ -41,11 +41,11 @@ You need to install and properly configure the following:
 
 ## Testing the Function
 - Use Terraform outputs to learn about the created resource names.
-- ![Resource Group containing the created resources.](https://github.com/HovhannesHovakimyan/azure-function-app-terraform/blob/265753b4425f0110512733e9b60790f568689509/screenshots/ResourceGroup.png)
+![Resource Group containing the created resources.](https://github.com/HovhannesHovakimyan/azure-function-app-terraform/blob/265753b4425f0110512733e9b60790f568689509/screenshots/ResourceGroup.png)
 - Open the Function logs
-- ![Showing Function logs output from Application Insights.](https://github.com/HovhannesHovakimyan/azure-function-app-terraform/blob/265753b4425f0110512733e9b60790f568689509/screenshots/FunctionLogs.png)
+![Showing Function logs output from Application Insights.](https://github.com/HovhannesHovakimyan/azure-function-app-terraform/blob/265753b4425f0110512733e9b60790f568689509/screenshots/FunctionLogs.png)
 - Navigate to the Storage Queue and create a new message. That will trigger the Function.
-- ![Creating a new message in the Storage Queue.](https://github.com/HovhannesHovakimyan/azure-function-app-terraform/blob/265753b4425f0110512733e9b60790f568689509/screenshots/StorageQueue.png)
+![Creating a new message in the Storage Queue.](https://github.com/HovhannesHovakimyan/azure-function-app-terraform/blob/265753b4425f0110512733e9b60790f568689509/screenshots/StorageQueue.png)
 - You should see the created message in the logs.
 
 

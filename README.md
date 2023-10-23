@@ -13,8 +13,7 @@ This Terraform code will create an Azure Function App and a new Python function.
 - Clone this Git repository.
 - Check and modify values in the **values.auto.tfvars** file.
 - In the clonned directory run the following command.
-> terraform init
-> terraform plan
+> terraform init && terraform plan
 - If the Terraform plan looks good for you, you can apply the changes by running:
 > terraform apply --auto-approve
 

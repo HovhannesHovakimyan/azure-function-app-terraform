@@ -17,6 +17,22 @@ You need to install and properly configure the following:
 >* Azure CLI
 
 
+## Created resources
+
+
+
+Terraform code and used command above will deploy and configure the following Azure resources:
+
+* Resource Group
+  * Log Analytics Workspace
+  * Application Insights
+  * Storage Account
+    * Storage Queue
+  * Key Vault
+    * Key Vault Secret
+  * App Service Plan
+    * Function App
+      * Function based on Python v3.9
 
 
 ## Usage (Deployment)
@@ -47,22 +63,6 @@ You need to install and properly configure the following:
 
 
 
-## Created resources
-
-
-
-Terraform code and used command above will deploy and configure the following Azure resources:
-
-* Resource Group
-  * Log Analytics Workspace
-  * Application Insights
-  * Storage Account
-    * Storage Queue
-  * Key Vault
-    * Key Vault Secret
-  * App Service Plan
-    * Function App
-      * Function based on Python v3.9
 
 
 

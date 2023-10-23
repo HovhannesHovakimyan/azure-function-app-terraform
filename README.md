@@ -19,7 +19,6 @@ This Terraform code will create an Azure Function App and a new Python function.
 > terraform apply --auto-approve
 
 
-
 ## Created resources
 
 Terraform code and used command above will deploy the following Azure resources:
@@ -33,3 +32,12 @@ Terraform code and used command above will deploy the following Azure resources:
 - App Service Plan
 - Function App
 -- Function based on Python v3.9
+
+
+# Cleanup
+
+Delete all resources created by this Terraform code.
+
+- Navigate to the root of the clonned directory.
+- Run the following command:
+> terraform destroy --auto-approve

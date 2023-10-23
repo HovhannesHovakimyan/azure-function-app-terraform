@@ -66,7 +66,7 @@ Terraform code and used command above will deploy and configure the following Az
     * Key Vault Secret
   * App Service Plan
     * Function App
-  * Function based on Python v3.9
+      * Function based on Python v3.9
 
 
 

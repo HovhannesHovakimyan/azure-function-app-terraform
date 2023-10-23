@@ -1,5 +1,5 @@
 
-# Terraform code to deploy an Azure Function App triggered by the Storage Queue message.
+# Terraform code for deploying an Azure Function App containing sample Python code triggered by a Storage Queue message.
 
 
 

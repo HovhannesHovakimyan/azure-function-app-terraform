@@ -27,15 +27,15 @@ You need to install and properly configure the following:
 
 - Check and modify values in the **values.auto.tfvars** file.
 - From your terminal of choice log in to Azure with the following command:
-> az login
-> az account set --subscription **your subscription name or ID**
+```az login```
+```az account set --subscription **your subscription name or ID**```
 - Navigate to the clonned directory run the following command.
 
-> terraform init && terraform plan
+```terraform init && terraform plan```
 
 - If the Terraform plan looks good for you, you can apply the changes by running:
 
-> terraform apply --auto-approve
+```terraform apply --auto-approve```
 
 
 
@@ -83,4 +83,4 @@ Delete all resources created by this Terraform code.
 
 - Run the following command:
 
-> terraform destroy --auto-approve
+```terraform destroy --auto-approve```

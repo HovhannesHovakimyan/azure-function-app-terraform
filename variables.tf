@@ -20,6 +20,7 @@ variable "tags_params" {
   description = "Default tags to be applied to the resources of the project."
 }
 
+# #### target location ###
 variable "location" {
   default     = "germanywestcentral"
   description = "Target location for resource deployment."
@@ -36,27 +37,73 @@ variable "naming_params" {
   description = "(optional) the basename of the resource to create, the basename will be sanitized as per supported characters set for each Azure resources."
 }
 
-# variable "resource_type" {
-#   type        = string
-#   description = "(optional) - describes the type of azure resource you are requesting a name from (eg. azure container registry: azurerm_container_registry)."
-# }
+# #### ./log-analytics-workspace.tf ###
+variable "sku" {
+  description = "(Optional) Specifies the SKU of the Log Analytics Workspace. Possible values are Free, PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, and PerGB2018 (new SKU as of 2018-04-03). Defaults to PerGB2018."
+  type        = string
+}
 
-# variable "prefixes" {
-#   type        = list(string)
-#   description = "(optional) - a list of prefix to append as the first characters of the generated name - prefixes will be separated by the separator character"
-# }
+variable "retention_in_days" {
+  description = "(Optional) The workspace data retention in days. Possible values are either 7 (Free Tier only) or range between 30 and 730."
+  type        = number
+}
 
-# variable "suffixes" {
-#   type        = list(string)
-#   description = "(optional) - a list of additional suffix added after the basename, this is can be used to append resource index (eg. vm-001). Suffixes are separated by the separator character"
-# }
+# #### ./application-insights.tf ###
+variable "application_type" {
+  description = "(Required) Specifies the type of Application Insights to create."
+  type        = string
+}
 
-# variable "random_length" {
-#   type        = string
-#   description = "(optional) - default to 0 : configure additional characters to append to the generated resource name. Random characters will remain compliant with the set of allowed characters per resources and will be appended before suffix(ess)."
-# }
+# #### ./appservice-plan.tf ###
+variable "app_srv_name" {
+  description = "Name of the App Service Plan."
+  type        = string
+}
 
-# variable "clean_input" {
-#   type        = bool
-#   description = "defaults to true. remove any noncompliant character from the name, suffix or prefix."
-# }
+variable "os_type" {
+  description = "(Required) The O/S type for the App Services to be hosted in this plan."
+  type        = string
+}
+
+variable "app_srv_sku_name" {
+  description = "(Required) The SKU for the plan."
+  type        = string
+}
+
+# #### ./function-app.tf ###
+variable "func_app_name" {
+  description = "Name of the Function App."
+  type        = string
+}
+
+variable "python_version" {
+  description = "(Optional) The version of Python to run."
+  type        = string
+}
+
+variable "allowed_origins" {
+  description = "(Required) Specifies a list of origins that should be allowed to make cross-origin calls."
+  type        = list(string)
+}
+
+variable "support_credentials" {
+  description = "Optional) Are credentials allowed in CORS requests? Defaults to false."
+  type        = bool
+}
+
+# #### ./storage-account.tf ###
+variable "account_tier" {
+  description = "(Required) Defines the Tier to use for this storage account."
+  type        = string
+}
+
+variable "account_replication_type" {
+  description = "(Required) Defines the type of replication to use for this storage account."
+  type        = string
+}
+
+# #### ./key-vault.tf ###
+variable "kv_sku_name" {
+  description = "(Required) The Name of the SKU used for this Key Vault. Possible values are standard and premium."
+  type        = string
+}

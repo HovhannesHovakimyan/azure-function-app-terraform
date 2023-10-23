@@ -8,16 +8,11 @@ resource "azurerm_key_vault" "main" {
   soft_delete_retention_days = 7
   purge_protection_enabled   = false
 
-  sku_name = "standard"
+  sku_name = var.kv_sku_name
 
   access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
     object_id = data.azurerm_client_config.current.object_id
-
-    # key_permissions = [
-    #   "Create",
-    #   "Get",
-    # ]
 
     secret_permissions = [
       "Delete",
@@ -33,10 +28,6 @@ resource "azurerm_key_vault" "main" {
     tenant_id = data.azurerm_client_config.current.tenant_id
     object_id = azurerm_linux_function_app.main.identity[0].principal_id
 
-    # key_permissions = [
-    #   "Get",
-    # ]
-
     secret_permissions = [
       "Delete",
       "Get",
@@ -45,10 +36,6 @@ resource "azurerm_key_vault" "main" {
       "Recover",
       "Set"
     ]
-
-    # storage_permissions = [
-    #   "Get",
-    # ]
   }
 
   tags = var.tags_params

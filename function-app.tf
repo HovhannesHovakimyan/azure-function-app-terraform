@@ -1,5 +1,5 @@
 resource "azurerm_linux_function_app" "main" {
-  name                = "func-hhcompany"
+  name                = var.func_app_name
   resource_group_name = azurerm_resource_group.main.name
   location            = var.location
 
@@ -11,18 +11,16 @@ resource "azurerm_linux_function_app" "main" {
     application_insights_key               = azurerm_application_insights.main.instrumentation_key
     application_insights_connection_string = azurerm_application_insights.main.connection_string
     application_stack {
-      python_version = "3.9"
+      python_version = var.python_version
     }
     cors {
-      allowed_origins     = ["https://portal.azure.com"]
-      support_credentials = true
+      allowed_origins     = var.allowed_origins
+      support_credentials = var.support_credentials
     }
   }
 
   app_settings = {
     "KEY_VAULT_NAME" = azurecaf_name.azurecaf_names["key_vault"].result
-    "secretName"     = "hhcompany"
-    "secretValue"    = "BestLifeBalance"
   }
 
   identity {
